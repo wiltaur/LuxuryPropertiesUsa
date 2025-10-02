@@ -1,0 +1,7 @@
+It is FromQuery:
+
+SearchString: Property
+PageNumber: 1
+PageSize: 2
+
+Try with other for test de ordering, searching and pagination.

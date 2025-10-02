@@ -5,5 +5,6 @@ namespace LuxuryPropertiesUsa.Domain.Interfaces;
 public interface IUnitOfWork
 {
     IPropertyRepository Properties { get; }
-    Task<int> SaveChangesAsync();
+    IPropertyImageRepository PropertyImages { get; }
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }
