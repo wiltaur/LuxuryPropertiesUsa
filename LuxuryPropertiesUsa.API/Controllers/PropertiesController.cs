@@ -1,11 +1,13 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using LuxuryPropertiesUsa.Application.Features.Properties.Queries;
+﻿using LuxuryPropertiesUsa.Application.DTOs.Properties;
 using LuxuryPropertiesUsa.Application.Features.Properties.Commands;
-using LuxuryPropertiesUsa.Application.DTOs.Properties;
+using LuxuryPropertiesUsa.Application.Features.Properties.Queries;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LuxuryPropertiesUsa.API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class PropertiesController(IMediator mediator) : ControllerBase
